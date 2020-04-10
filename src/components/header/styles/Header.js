@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
+export const Frame = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: url(../images/misc/home-bg.jpg) top left / cover no-repeat;
+`;
+
 export const Container = styled.section`
   display: flex;
   margin: 0 3.5rem;
   height: 4rem;
-  padding: 30px 0;
+  padding: 23px 0;
   justify-content: space-between;
 `;
 
@@ -24,7 +30,12 @@ export const Button = styled.button`
   }
 `;
 
-export const Image = styled.img`
-  height: 36px;
-  width: 134px;
+export const Logo = styled.img`
+  height: 32px;
+  width: 108px;
+
+  @media (min-width: 1449px) {
+    height: 36px;
+    width: 134px;
+  }
 `;

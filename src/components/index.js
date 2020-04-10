@@ -4,6 +4,5 @@ import { Feature } from './feature';
 import { Form } from './form';
 import { Footer } from './footer';
 import { Header } from './header';
-import { Wrapper } from './wrapper';
 
-export { Accordion, Card, Feature, Form, Footer, Header, Wrapper };
+export { Accordion, Card, Feature, Form, Footer, Header };

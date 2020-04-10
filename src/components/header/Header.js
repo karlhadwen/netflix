@@ -1,12 +1,16 @@
 import React from 'react';
-import { Container, Button, Image } from './styles/Header';
+import { Container, Frame, Button, Logo } from './styles/Header';
 
 export function Header({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+  return <Frame {...restProps}>{children}</Frame>;
 }
 
-Header.Image = function HeaderImage({ ...restProps }) {
-  return <Image {...restProps} />;
+Header.Frame = function HeaderFrame({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
+};
+
+Header.Logo = function HeaderLogo({ ...restProps }) {
+  return <Logo {...restProps} />;
 };
 
 Header.Button = function HeaderButton({ children, ...restProps }) {
