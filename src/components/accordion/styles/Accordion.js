@@ -5,6 +5,10 @@ export const Container = styled.div`
   border-bottom: 8px solid #222;
 `;
 
+export const Frame = styled.div`
+  margin-bottom: 2.5rem;
+`;
+
 export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;

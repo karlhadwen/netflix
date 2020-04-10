@@ -18,7 +18,7 @@ Form.Button = function FormButton({ children, ...restProps }) {
   );
 };
 
-Form.Text = function FeatureSubTitle({ children, ...restProps }) {
+Form.Text = function FormText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
