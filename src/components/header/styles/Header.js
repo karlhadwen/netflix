@@ -17,6 +17,11 @@ export const Button = styled.button`
   font-size: 15px;
   border-radius: 3px;
   padding: 7px 17px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f40612;
+  }
 `;
 
 export const Image = styled.img`
