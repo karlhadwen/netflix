@@ -1,6 +1,24 @@
 import React from 'react';
-import { Home } from './pages/home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home, Browse, Signin, Signup } from './pages';
 
 export function App() {
-  return <Home />;
+  return (
+    <Router>
+      <Switch>
+        <Route path="/signin">
+          <Signin />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+        <Route path="/browse">
+          <Browse />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }

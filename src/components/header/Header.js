@@ -1,8 +1,14 @@
-import React from 'react';
-import { Container, Frame, Button, Logo } from './styles/Header';
+import React, { useContext, createContext } from 'react';
+import { Container, Frame, Link, Logo } from './styles/Header';
 
-export function Header({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
+export const LinkContext = createContext();
+
+export function Header({ to, children, ...restProps }) {
+  return (
+    <LinkContext.Provider value={{ to }}>
+      <Frame {...restProps}>{children}</Frame>
+    </LinkContext.Provider>
+  );
 }
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
@@ -13,6 +19,12 @@ Header.Logo = function HeaderLogo({ ...restProps }) {
   return <Logo {...restProps} />;
 };
 
-Header.Button = function HeaderButton({ children, ...restProps }) {
-  return <Button {...restProps}>{children}</Button>;
+Header.Link = function HeaderButton({ children, ...restProps }) {
+  const { to } = useContext(LinkContext);
+
+  return (
+    <Link to={to} {...restProps}>
+      {children}
+    </Link>
+  );
 };
