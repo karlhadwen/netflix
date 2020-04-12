@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FirebaseContext } from '../context';
 
 export function Browse() {
-  return <p>Browse...</p>;
+  const { firebase } = useContext(FirebaseContext);
+
+  return (
+    <p>
+      Browse...
+      <button type="button" onClick={() => firebase.auth().signOut()}>
+        Sign Out
+      </button>
+    </p>
+  );
 }

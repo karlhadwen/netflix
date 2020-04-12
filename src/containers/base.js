@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header, Feature, Form, Footer } from '../components';
 import logo from '../logo.svg';
+import * as ROUTES from '../constants/routes';
 
 export function BaseContainer({ children }) {
   return (
@@ -8,7 +9,7 @@ export function BaseContainer({ children }) {
       <Header>
         <Header.Frame>
           <Header.Logo src={logo} alt="Netflix" />
-          <Header.Link to="/signin">Sign In</Header.Link>
+          <Header.Link to={ROUTES.SIGN_IN}>Sign In</Header.Link>
         </Header.Frame>
 
         <Feature>
