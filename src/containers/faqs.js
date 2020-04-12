@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Form } from '../components';
+import { Accordion, OptForm } from '../components';
 
 const faqs = [
   {
@@ -47,14 +47,12 @@ export function FaqsContainer() {
         ))}
       </Accordion.Frame>
 
-      <Form>
-        <Form.Input placeholder="Email address" />
-        <Form.Button>Try it now</Form.Button>
-        <Form.Break />
-        <Form.Text>
-          Ready to watch? Enter your email to create or restart your membership.
-        </Form.Text>
-      </Form>
+      <OptForm>
+        <OptForm.Input placeholder="Email address" />
+        <OptForm.Button>Try it now</OptForm.Button>
+        <OptForm.Break />
+        <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
+      </OptForm>
     </Accordion>
   );
 }

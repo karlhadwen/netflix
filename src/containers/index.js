@@ -1,4 +1,5 @@
-import { BaseContainer } from './base';
+import { HeaderContainer } from './header';
 import { FaqsContainer } from './faqs';
+import { FooterContainer } from './footer';
 
-export { BaseContainer, FaqsContainer };
+export { HeaderContainer, FaqsContainer, FooterContainer };

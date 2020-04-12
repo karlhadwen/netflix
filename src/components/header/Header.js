@@ -1,12 +1,13 @@
 import React, { useContext, createContext } from 'react';
-import { Container, Frame, Link, Logo } from './styles/Header';
+import { Link as ReachRouterLink } from 'react-router-dom';
+import { Container, Background, Link, Logo } from './styles/Header';
 
 export const LinkContext = createContext();
 
-export function Header({ to, children, ...restProps }) {
+export function Header({ bg = true, to, children, ...restProps }) {
   return (
     <LinkContext.Provider value={{ to }}>
-      <Frame {...restProps}>{children}</Frame>
+      {bg ? <Background {...restProps}>{children}</Background> : children}
     </LinkContext.Provider>
   );
 }
@@ -15,8 +16,12 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 };
 
-Header.Logo = function HeaderLogo({ ...restProps }) {
-  return <Logo {...restProps} />;
+Header.Logo = function HeaderLogo({ to, ...restProps }) {
+  return (
+    <ReachRouterLink to={to}>
+      <Logo {...restProps} />
+    </ReachRouterLink>
+  );
 };
 
 Header.Link = function HeaderButton({ children, ...restProps }) {

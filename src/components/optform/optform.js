@@ -1,16 +1,16 @@
 import React from 'react';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { Container, Input, Break, Button, Text } from './styles/Form';
+import { Container, Input, Break, Button, Text } from './styles/OptForm';
 
-export function Form({ children, ...restProps }) {
+export function OptForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Form.Input = function FormInput({ ...restProps }) {
+OptForm.Input = function OptFormInput({ ...restProps }) {
   return <Input {...restProps} />;
 };
 
-Form.Button = function FormButton({ children, ...restProps }) {
+OptForm.Button = function OptFormButton({ children, ...restProps }) {
   return (
     <Button {...restProps}>
       {children} <ChevronRightIcon fontSize="large" />
@@ -18,10 +18,10 @@ Form.Button = function FormButton({ children, ...restProps }) {
   );
 };
 
-Form.Text = function FormText({ children, ...restProps }) {
+OptForm.Text = function OptFormText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
-Form.Break = function FormBreak({ ...restProps }) {
+OptForm.Break = function OptFormBreak({ ...restProps }) {
   return <Break {...restProps} />;
 };
