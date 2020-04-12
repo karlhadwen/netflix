@@ -1,26 +1,25 @@
 import React from 'react';
-import { Container, Inner, Pane, Title, SubTitle, Image } from './styles/Card';
+import { Container, Group, Item, Cta } from './styles/Card';
 
-export function Card({ children, direction = 'row', ...restProps }) {
-  return (
-    <Container {...restProps}>
-      <Inner direction={direction}>{children}</Inner>
-    </Container>
-  );
+export function Card({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
 }
 
-Card.Pane = function CardPane({ children, ...restProps }) {
-  return <Pane {...restProps}>{children}</Pane>;
+Card.Group = function CardGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
 };
 
-Card.Title = function CardTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
+Card.Item = function CardItem({ children, ...restProps }) {
+  return <Item {...restProps}>{children}</Item>;
 };
 
-Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
-  return <SubTitle {...restProps}>{children}</SubTitle>;
+Card.Cta = function CardCta({ backgroundSrc, children, ...restProps }) {
+  return (
+    <Cta backgroundSrc={backgroundSrc} {...restProps}>
+      {children}
+    </Cta>
+  );
 };
 
-Card.Image = function CardImage({ ...restProps }) {
-  return <Image {...restProps} />;
-};
+// loading state on cards (placeholder)
+// trigger dropdown panel

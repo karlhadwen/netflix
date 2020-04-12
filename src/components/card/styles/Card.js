@@ -7,32 +7,26 @@ export const Container = styled.div`
   color: white;
 `;
 
-export const Inner = styled.div`
+export const Item = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: ${(props) => props.direction};
-  max-width: 1100px;
-  margin: auto;
-  width: 100%;
+  margin-right: 5px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
-export const Pane = styled.div`
-  width: 50%;
+export const Group = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
-export const Title = styled.h1`
-  font-size: 3.125rem;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-`;
-
-export const SubTitle = styled.h2`
-  font-size: 1.625rem;
-  font-weight: normal;
-  line-height: normal;
-`;
-
-export const Image = styled.img`
-  height: 398px;
+export const Cta = styled.button`
+  cursor: pointer;
+  border: 0;
+  background: url(${(props) => props.backgroundSrc});
+  width: 305px;
+  height: 172px;
+  padding: 0;
+  margin: 0;
 `;
