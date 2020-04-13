@@ -1,5 +1,4 @@
 import { useAuthListener } from './useAuthListener';
-import { useSeries } from './useSeries';
-import { useFilms } from './useFilms';
+import { useContent } from './useContent';
 
-export { useAuthListener, useSeries, useFilms };
+export { useAuthListener, useContent };

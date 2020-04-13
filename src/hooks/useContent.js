@@ -1,27 +1,27 @@
 import { useEffect, useState, useContext } from 'react';
 import { FirebaseContext } from '../context';
 
-export const useSeries = () => {
-  const [series, setSeries] = useState([]);
+export const useContent = (target) => {
+  const [content, setContent] = useState([]);
   const { firebase } = useContext(FirebaseContext);
 
   useEffect(() => {
     firebase
       .firestore()
-      .collection('series')
+      .collection(target)
       .get()
       .then((snapshot) => {
-        const allSeries = snapshot.docs.map((seriesObj) => ({
-          ...seriesObj.data(),
-          docId: seriesObj.id,
+        const allContent = snapshot.docs.map((contentObj) => ({
+          ...contentObj.data(),
+          docId: contentObj.id,
         }));
 
-        setSeries(allSeries);
+        setContent(allContent);
       })
       .catch((error) => {
         console.log(error.message);
       });
   }, []);
 
-  return { series };
+  return { [target]: content };
 };
