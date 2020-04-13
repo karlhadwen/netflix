@@ -10,8 +10,10 @@ export function seedDatabase(firebase) {
     /* eslint-enable */
   }
 
+  /* Series
+    ============================================ */
   // Documentaries
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     firebase.firestore().collection('series').add({
       id: getUUID(),
       title: 'Tiger King',
@@ -23,7 +25,7 @@ export function seedDatabase(firebase) {
   }
 
   // Comedies
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     firebase.firestore().collection('series').add({
       id: getUUID(),
       title: 'The Office',
@@ -36,20 +38,20 @@ export function seedDatabase(firebase) {
   }
 
   // Children
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Hotel Transylvania',
+      title: 'Peppa Pig',
       description:
-        'Dracula, who owns a high-end resort for monsters, attempts to keep his daughter from falling in love with Jonathan, a human.',
+        'Peppa, an outgoing preschool pig, participates in many energetic activities. She learns something new every day and has a lot of fun with her family and friends.',
       genre: 'children',
       maturity: '0',
-      slug: 'hotel-transylvania',
+      slug: 'peppa-pig',
     });
   }
 
   // Crime
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     firebase.firestore().collection('series').add({
       id: getUUID(),
       title: 'Making a Murderer',
@@ -62,7 +64,7 @@ export function seedDatabase(firebase) {
   }
 
   // Feel-good
-  for (let index = 0; index <= 10; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     firebase.firestore().collection('series').add({
       id: getUUID(),
       title: 'Good Will Hunting',
@@ -71,6 +73,73 @@ export function seedDatabase(firebase) {
       genre: 'feel-good',
       maturity: '15',
       slug: 'good-will-hunting',
+    });
+  }
+
+  /* Films
+    ============================================ */
+  // Drama
+  for (let index = 0; index < 5; index += 1) {
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'The Prestige',
+      description:
+        'Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but with terrible consequences.',
+      genre: 'drama',
+      maturity: '15',
+      slug: 'the-prestige',
+    });
+  }
+
+  // Suspense
+  for (let index = 0; index < 5; index += 1) {
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Shutter Island',
+      description:
+        'Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.',
+      genre: 'suspense',
+      maturity: '15',
+      slug: 'shutter-island',
+    });
+  }
+
+  // Children
+  for (let index = 0; index < 5; index += 1) {
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Hotel Transylvania',
+      description:
+        'Dracula, who owns a high-end resort for monsters, attempts to keep his daughter from falling in love with Jonathan, a human.',
+      genre: 'children',
+      maturity: '0',
+      slug: 'hotel-transylvania',
+    });
+  }
+
+  // Thriller
+  for (let index = 0; index < 5; index += 1) {
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Joker',
+      description:
+        'Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City.',
+      genre: 'thriller',
+      maturity: '15',
+      slug: 'joker',
+    });
+  }
+
+  // Romance
+  for (let index = 0; index < 5; index += 1) {
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'A Star Is Born',
+      description:
+        'After falling in love with struggling artist Ally, Jackson, a musician, coaxes her to follow her dreams, while he battles with alcoholism and his personal demons.',
+      genre: 'romance',
+      maturity: '15',
+      slug: 'a-star-is-born',
     });
   }
 }

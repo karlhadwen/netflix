@@ -7,6 +7,5 @@ import { SignInForm } from './signinform';
 import { Profiles } from './profiles';
 import { Footer } from './footer';
 import { Header } from './header';
-import { Slider } from './slider';
 
-export { Accordion, Card, Jumbotron, Feature, OptForm, SignInForm, Profiles, Footer, Header, Slider };
+export { Accordion, Card, Jumbotron, Feature, OptForm, SignInForm, Profiles, Footer, Header };

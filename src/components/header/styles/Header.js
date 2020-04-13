@@ -7,7 +7,7 @@ export const Background = styled.div`
   background: url(../images/misc/home-bg.jpg) top left / cover no-repeat;
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   display: flex;
   margin: 0 3.5rem;
   height: 4rem;
@@ -16,7 +16,28 @@ export const Container = styled.section`
   align-items: center;
 `;
 
-export const Link = styled(ReachRouterLink)`
+export const Link = styled.p`
+  color: #fff;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${(props) => (props.active === 'true' ? '700' : 'normal')};
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ButtonLink = styled(ReachRouterLink)`
   display: block;
   background-color: #e50914;
   width: 84px;
@@ -38,6 +59,7 @@ export const Link = styled(ReachRouterLink)`
 export const Logo = styled.img`
   height: 32px;
   width: 108px;
+  margin-right: 40px;
 
   @media (min-width: 1449px) {
     height: 45px;

@@ -1,72 +1,46 @@
 import React from 'react';
-import { useSeries } from '../hooks/useSeries';
-import { Card, Slider } from '../components';
+import { Card, Header } from '../components';
+import * as ROUTES from '../constants/routes';
+import { FooterContainer } from './footer';
+import logo from '../logo.svg';
 
-export function BrowseContainer() {
-  const { series } = useSeries();
-
-  const documentaries = series.filter((item) => item.genre === 'documentaries');
-  const comedies = series.filter((item) => item.genre === 'comedies');
-  const children = series.filter((item) => item.genre === 'children');
-  const crime = series.filter((item) => item.genre === 'crime');
-  const feelGood = series.filter((item) => item.genre === 'feel-good');
-
+export function BrowseContainer({ selection, setSelection, slides }) {
   return (
     <>
-      <Slider>
-        <Slider.Title>Documentaries</Slider.Title>
-        <Card.Group>
-          {documentaries?.map((item) => (
-            <Card.Item key={item.docId}>
-              <Card.Cta backgroundSrc={`/images/series/${item.genre}/${item.slug}/small.jpg`} />
-            </Card.Item>
-          ))}
-        </Card.Group>
-      </Slider>
+      <Header bg={false}>
+        <Header.Frame>
+          <Header.Group>
+            <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+            <Header.Link active={selection === 'series' ? 'true' : 'false'} onClick={() => setSelection('series')}>
+              Series
+            </Header.Link>
+            <Header.Link active={selection === 'films' ? 'true' : 'false'} onClick={() => setSelection('films')}>
+              Films
+            </Header.Link>
+          </Header.Group>
+        </Header.Frame>
+      </Header>
 
-      <Slider>
-        <Slider.Title>Comedies</Slider.Title>
-        <Card.Group>
-          {comedies?.map((item) => (
-            <Card.Item key={item.docId}>
-              <Card.Cta backgroundSrc={`/images/series/${item.genre}/${item.slug}/small.jpg`} />
-            </Card.Item>
-          ))}
-        </Card.Group>
-      </Slider>
+      <Card.Group>
+        {slides.map((slideItem) => (
+          <Card key={`${slideItem.title}-${slideItem.genre}`}>
+            <Card.Title>{slideItem.title}</Card.Title>
+            <Card.Entities>
+              {slideItem.data?.map((item) => (
+                <Card.Item key={item.docId}>
+                  <Card.Image src={`/images/${selection}/${item.genre}/${item.slug}/small.jpg`} />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
+                </Card.Item>
+              ))}
+            </Card.Entities>
+          </Card>
+        ))}
+      </Card.Group>
 
-      <Slider>
-        <Slider.Title>Children</Slider.Title>
-        <Card.Group>
-          {children?.map((item) => (
-            <Card.Item key={item.docId}>
-              <Card.Cta backgroundSrc={`/images/series/${item.genre}/${item.slug}/small.jpg`} />
-            </Card.Item>
-          ))}
-        </Card.Group>
-      </Slider>
-
-      <Slider>
-        <Slider.Title>Crime</Slider.Title>
-        <Card.Group>
-          {crime?.map((item) => (
-            <Card.Item key={item.docId}>
-              <Card.Cta backgroundSrc={`/images/series/${item.genre}/${item.slug}/small.jpg`} />
-            </Card.Item>
-          ))}
-        </Card.Group>
-      </Slider>
-
-      <Slider>
-        <Slider.Title>Feel Good</Slider.Title>
-        <Card.Group>
-          {feelGood?.map((item) => (
-            <Card.Item key={item.docId}>
-              <Card.Cta backgroundSrc={`/images/series/${item.genre}/${item.slug}/small.jpg`} />
-            </Card.Item>
-          ))}
-        </Card.Group>
-      </Slider>
+      <FooterContainer />
     </>
   );
 }

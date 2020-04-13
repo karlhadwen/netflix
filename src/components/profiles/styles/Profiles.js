@@ -24,24 +24,14 @@ export const List = styled.ul`
   flex-direction: row;
 `;
 
-export const Item = styled.li`
-  max-height: 200px;
-  max-width: 200px;
-  list-style-type: none;
-  text-align: center;
-  margin-right: 30px;
-  cursor: pointer;
+export const Name = styled.p`
+  color: #808080;
+  text-overflow: ellipsis;
+  font-size: 1rem;
 
-  &:hover > img {
-    border: 3px solid white;
-  }
-
-  &:hover > p {
-    color: white;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
+  &:hover {
+    font-weight: bold;
+    color: #e5e5e5;
   }
 `;
 
@@ -52,12 +42,24 @@ export const Picture = styled.img`
   border: 3px solid black;
 `;
 
-export const Name = styled.p`
-  color: #808080;
-  text-overflow: ellipsis;
-  font-size: 1rem;
+export const Item = styled.li`
+  max-height: 200px;
+  max-width: 200px;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 30px;
+  cursor: pointer;
 
-  &:hover {
-    color: #e5e5e5;
+  &:hover > ${Picture} {
+    border: 3px solid white;
+  }
+
+  &:hover ${Name} {
+    font-weight: bold;
+    color: white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 `;
