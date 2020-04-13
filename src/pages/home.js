@@ -1,6 +1,7 @@
 import React from 'react';
 import { Feature, OptForm, Jumbotron } from '../components';
 import { HeaderContainer, FaqsContainer, FooterContainer } from '../containers';
+import jumboData from '../fixtures/jumbo';
 
 export function Home() {
   return (
@@ -18,39 +19,17 @@ export function Home() {
         </Feature>
       </HeaderContainer>
 
-      <Jumbotron>
-        <Jumbotron.Pane>
-          <Jumbotron.Title>Enjoy on your TV.</Jumbotron.Title>
-          <Jumbotron.SubTitle>
-            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
-          </Jumbotron.SubTitle>
-        </Jumbotron.Pane>
-        <Jumbotron.Pane>
-          <Jumbotron.Image src="/images/misc/home-tv.jpg" alt="Tiger King on Netflix" />
-        </Jumbotron.Pane>
-      </Jumbotron>
-
-      <Jumbotron direction="row-reverse">
-        <Jumbotron.Pane>
-          <Jumbotron.Title>Download your programmes to watch on the go.</Jumbotron.Title>
-          <Jumbotron.SubTitle>Save your data and watch all your favourites offline.</Jumbotron.SubTitle>
-        </Jumbotron.Pane>
-        <Jumbotron.Pane>
-          <Jumbotron.Image src="/images/misc/home-mobile.jpg" alt="Tiger King on Netflix" />
-        </Jumbotron.Pane>
-      </Jumbotron>
-
-      <Jumbotron>
-        <Jumbotron.Pane>
-          <Jumbotron.Title>Watch everywhere.</Jumbotron.Title>
-          <Jumbotron.SubTitle>
-            Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.
-          </Jumbotron.SubTitle>
-        </Jumbotron.Pane>
-        <Jumbotron.Pane>
-          <Jumbotron.Image src="/images/misc/home-imac.jpg" alt="Money Heist on Netflix" />
-        </Jumbotron.Pane>
-      </Jumbotron>
+      {jumboData.map((item) => (
+        <Jumbotron direction={item.direction}>
+          <Jumbotron.Pane>
+            <Jumbotron.Title>{item.title}</Jumbotron.Title>
+            <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
+          </Jumbotron.Pane>
+          <Jumbotron.Pane>
+            <Jumbotron.Image src={item.image} alt={item.alt} />
+          </Jumbotron.Pane>
+        </Jumbotron>
+      ))}
 
       <FaqsContainer />
       <FooterContainer />
