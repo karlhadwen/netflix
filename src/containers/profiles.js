@@ -3,7 +3,7 @@ import { Header, Profiles } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
-export function SelectProfileContainer({ setProfileId }) {
+export default function SelectProfileContainer({ setProfileId }) {
   const users = [
     {
       id: 1,

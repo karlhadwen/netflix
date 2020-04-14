@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Header } from '../components';
 import * as ROUTES from '../constants/routes';
-import { FooterContainer } from './footer';
 import logo from '../logo.svg';
 
-export function BrowseContainer({ selection, setSelection, slides }) {
+export default function BrowseContainer({ selection, setSelection, slides }) {
   return (
     <>
       <Header bg={false}>
@@ -39,8 +38,6 @@ export function BrowseContainer({ selection, setSelection, slides }) {
           </Card>
         ))}
       </Card.Group>
-
-      <FooterContainer />
     </>
   );
 }

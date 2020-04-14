@@ -1,11 +1,9 @@
-import { Accordion } from './accordion';
-import { Card } from './card';
-import { Jumbotron } from './jumbotron';
-import { Feature } from './feature';
-import { OptForm } from './optform';
-import { SignInForm } from './signinform';
-import { Profiles } from './profiles';
-import { Footer } from './footer';
-import { Header } from './header';
-
-export { Accordion, Card, Jumbotron, Feature, OptForm, SignInForm, Profiles, Footer, Header };
+export { default as Accordion } from './accordion';
+export { default as Card } from './card';
+export { default as Jumbotron } from './jumbotron';
+export { default as Feature } from './feature';
+export { default as OptForm } from './optform';
+export { default as SignInForm } from './signinform';
+export { default as Profiles } from './profiles';
+export { default as Footer } from './footer';
+export { default as Header } from './header';

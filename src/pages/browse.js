@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { BrowseContainer, SelectProfileContainer } from '../containers';
+import { BrowseContainer, SelectProfileContainer, FooterContainer } from '../containers';
 import { useContent } from '../hooks';
 import { selectionMap } from '../utils';
 
-export function Browse() {
+export default function Browse() {
   const { series } = useContent('series');
   const { films } = useContent('films');
   const [profileId, setProfileId] = useState(null);
@@ -11,7 +11,10 @@ export function Browse() {
   const slideData = selectionMap({ series, films });
 
   return profileId ? (
-    <BrowseContainer selection={selection} setSelection={setSelection} slides={slideData[selection]} />
+    <>
+      <BrowseContainer selection={selection} setSelection={setSelection} slides={slideData[selection]} />
+      <FooterContainer />
+    </>
   ) : (
     <SelectProfileContainer setProfileId={setProfileId} />
   );

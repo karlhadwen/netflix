@@ -3,7 +3,7 @@ import { Feature, OptForm, Jumbotron } from '../components';
 import { HeaderContainer, FaqsContainer, FooterContainer } from '../containers';
 import jumboData from '../fixtures/jumbo';
 
-export function Home() {
+export default function Home() {
   return (
     <>
       <HeaderContainer>

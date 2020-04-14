@@ -1,3 +1,1 @@
-import { selectionMap } from './selectionMap';
-
-export { selectionMap };
+export { default as selectionMap } from './selectionMap';

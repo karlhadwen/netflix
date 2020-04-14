@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FirebaseContext } from '../context';
+import { FirebaseContext } from '../context/firebase';
 import { SignInForm } from '../components';
 import { HeaderContainer, FooterContainer } from '../containers';
 import * as ROUTES from '../constants/routes';
 
-export function Signin() {
+export default function Signin() {
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
 

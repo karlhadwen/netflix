@@ -1,6 +1,4 @@
-import { Home } from './home';
-import { Browse } from './browse';
-import { Signin } from './signin';
-import { Signup } from './signup';
-
-export { Home, Browse, Signin, Signup };
+export { default as Home } from './home';
+export { default as Browse } from './browse';
+export { default as Signin } from './signin';
+export { default as Signup } from './signup';

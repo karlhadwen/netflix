@@ -4,7 +4,7 @@ import 'normalize.css';
 import { GlobalStyles } from './globalStyles';
 import { App } from './App';
 import { firebase } from './lib/firebase';
-import { FirebaseContext } from './context';
+import { FirebaseContext } from './context/firebase';
 
 ReactDOM.render(
   <React.StrictMode>
