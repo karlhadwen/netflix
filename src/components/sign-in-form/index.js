@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Error, Base, Title, Text, TextSmall, Link, Input, Submit } from './styles/SignInForm';
+import { Container, Error, Base, Title, Text, TextSmall, Link, Input, Submit } from './styles/sign-in-form';
 
 export default function SignInForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;

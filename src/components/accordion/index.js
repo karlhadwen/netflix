@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
 import AddIcon from '@material-ui/icons/Add';
-import { Container, Frame, Title, Item, Inner, Header, Body } from './styles/Accordion';
+import { Container, Frame, Title, Item, Inner, Header, Body } from './styles/feature';
 
 export const ToggleContext = createContext();
 

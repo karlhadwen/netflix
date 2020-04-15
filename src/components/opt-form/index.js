@@ -1,6 +1,6 @@
 import React from 'react';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { Container, Input, Break, Button, Text } from './styles/OptForm';
+import { Container, Input, Break, Button, Text } from './styles/optform';
 
 export default function OptForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;

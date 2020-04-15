@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ReachRouterLink } from 'react-router-dom';
-import { Container, Group, Background, Link, ButtonLink, Logo } from './styles/Header';
+import { Container, Group, Background, Link, ButtonLink, Logo } from './styles/header';
 
 export default function Header({ bg = true, children, ...restProps }) {
   return bg ? <Background {...restProps}>{children}</Background> : children;
