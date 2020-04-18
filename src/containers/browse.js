@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Header } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
-export default function BrowseContainer({ selection, setSelection, slides }) {
+export default function BrowseContainer({ slides }) {
+  const [selection, setSelection] = useState('series');
+
   return (
     <>
       <Header bg={false}>
@@ -21,11 +23,11 @@ export default function BrowseContainer({ selection, setSelection, slides }) {
       </Header>
 
       <Card.Group>
-        {slides.map((slideItem) => (
+        {slides[selection].map((slideItem) => (
           <Card key={`${slideItem.title}-${slideItem.genre}`}>
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
-              {slideItem.data?.map((item) => (
+              {slideItem.data.map((item) => (
                 <Card.Item key={item.docId}>
                   <Card.Image src={`/images/${selection}/${item.genre}/${item.slug}/small.jpg`} />
                   <Card.Meta>

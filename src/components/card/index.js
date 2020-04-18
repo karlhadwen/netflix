@@ -2,7 +2,11 @@ import React from 'react';
 import { Container, Group, Title, SubTitle, Text, Meta, Entities, Item, Image } from './styles/card';
 
 export default function Card({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container {...restProps} onLoad={() => 'loaded'}>
+      {children}
+    </Container>
+  );
 }
 
 Card.Group = function CardGroup({ children, ...restProps }) {
@@ -37,8 +41,8 @@ Card.Item = function CardItem({ children, ...restProps }) {
   return <Item {...restProps}>{children}</Item>;
 };
 
-Card.Image = function CardImage({ src, ...restProps }) {
-  return <Image src={src} {...restProps} />;
+Card.Image = function CardImage({ ...restProps }) {
+  return <Image {...restProps} />;
 };
 
 // loading state on cards (placeholder)

@@ -20,7 +20,7 @@ export default function Home() {
       </HeaderContainer>
 
       {jumboData.map((item) => (
-        <Jumbotron direction={item.direction}>
+        <Jumbotron id={item.id} direction={item.direction}>
           <Jumbotron.Pane>
             <Jumbotron.Title>{item.title}</Jumbotron.Title>
             <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>

@@ -1,7 +1,10 @@
 import { useEffect, useState, useContext } from 'react';
 import { FirebaseContext } from '../context/firebase';
 
+// with the profile id updating, this is going to get called again and again,
+// need to figure out how to stop that
 export default function useContent(target) {
+  console.log('here');
   const [content, setContent] = useState([]);
   const { firebase } = useContext(FirebaseContext);
 

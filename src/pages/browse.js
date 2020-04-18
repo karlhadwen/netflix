@@ -7,12 +7,11 @@ export default function Browse() {
   const { series } = useContent('series');
   const { films } = useContent('films');
   const [profileId, setProfileId] = useState(null);
-  const [selection, setSelection] = useState('series');
-  const slideData = selectionMap({ series, films });
+  const slides = selectionMap({ series, films });
 
   return profileId ? (
     <>
-      <BrowseContainer selection={selection} setSelection={setSelection} slides={slideData[selection]} />
+      <BrowseContainer slides={slides} />
       <FooterContainer />
     </>
   ) : (
