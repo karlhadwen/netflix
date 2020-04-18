@@ -14,7 +14,6 @@ export default function BrowseContainer({ slides }) {
 
   useEffect(() => {
     setLoading(true);
-    console.log('Changed', profile.displayName);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -59,16 +58,17 @@ export default function BrowseContainer({ slides }) {
             City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
             futile attempt to feel like he's part of the world around him.
           </Header.Text>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
 
       <Card.Group style={{ marginTop: '-150px' }}>
         {slides[selection].map((slideItem) => (
-          <Card key={`${slideItem.title}-${slideItem.genre}`}>
+          <Card key={`${selection}-${slideItem.title.toLowerCase()}`}>
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
               {slideItem.data.map((item) => (
-                <Card.Item key={item.docId}>
+                <Card.Item key={item.docId} item={item}>
                   <Card.Image src={`/images/${selection}/${item.genre}/${item.slug}/small.jpg`} />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>
@@ -77,14 +77,13 @@ export default function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
+            <Card.Feature />
           </Card>
         ))}
       </Card.Group>
       <FooterContainer />
     </>
   ) : (
-    <>
-      <SelectProfileContainer user={user} setProfile={setProfile} />
-    </>
+    <SelectProfileContainer user={user} setProfile={setProfile} />
   );
 }
