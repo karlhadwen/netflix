@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { Card, Header } from '../components';
+import React, { useState, useEffect, useContext } from 'react';
+import { Card, Header, Loading } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 import { FirebaseContext } from '../context/firebase';
@@ -10,19 +10,30 @@ export default function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    console.log('Changed', profile.displayName);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [profile.displayName]);
 
   return profile.displayName ? (
     <>
-      <Header bg={false}>
+      {loading ? <Loading src={`/images/users/${user.photoURL}.png`} /> : <Loading.ReleaseBody />}
+
+      <Header src="joker1">
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-            <Header.Link active={selection === 'series' ? 'true' : 'false'} onClick={() => setSelection('series')}>
+            <Header.TextLink active={selection === 'series' ? 'true' : 'false'} onClick={() => setSelection('series')}>
               Series
-            </Header.Link>
-            <Header.Link active={selection === 'films' ? 'true' : 'false'} onClick={() => setSelection('films')}>
+            </Header.TextLink>
+            <Header.TextLink active={selection === 'films' ? 'true' : 'false'} onClick={() => setSelection('films')}>
               Films
-            </Header.Link>
+            </Header.TextLink>
           </Header.Group>
           <Header.Group>
             <Header.Search />
@@ -31,18 +42,27 @@ export default function BrowseContainer({ slides }) {
               <Header.Dropdown>
                 <Header.Group>
                   <Header.Picture src={`/images/users/${user.photoURL}.png`} />
-                  <Header.Link>{user.displayName}</Header.Link>
+                  <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.Link onClick={() => firebase.auth().signOut()}>Sign out</Header.Link>
+                  <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out</Header.TextLink>
                 </Header.Group>
               </Header.Dropdown>
             </Header.Profile>
           </Header.Group>
         </Header.Frame>
+
+        <Header.Feature>
+          <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
+          <Header.Text>
+            Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
+            City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
+            futile attempt to feel like he's part of the world around him.
+          </Header.Text>
+        </Header.Feature>
       </Header>
 
-      <Card.Group>
+      <Card.Group style={{ marginTop: '-150px' }}>
         {slides[selection].map((slideItem) => (
           <Card key={`${slideItem.title}-${slideItem.genre}`}>
             <Card.Title>{slideItem.title}</Card.Title>
@@ -63,6 +83,8 @@ export default function BrowseContainer({ slides }) {
       <FooterContainer />
     </>
   ) : (
-    <SelectProfileContainer user={user} setProfile={setProfile} />
+    <>
+      <SelectProfileContainer user={user} setProfile={setProfile} />
+    </>
   );
 }

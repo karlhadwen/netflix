@@ -4,7 +4,8 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: url(../images/misc/home-bg.jpg) top left / cover no-repeat;
+  background: url(${(props) => (props.src ? `../images/misc/${props.src}.jpg` : '../images/misc/home-bg.jpg')}) top left /
+    cover no-repeat;
 `;
 
 export const Container = styled.div`
@@ -90,7 +91,7 @@ export const Picture = styled.button`
 export const Dropdown = styled.div`
   display: none;
   position: absolute;
-  background-color: #ccc;
+  background-color: black;
   padding: 10px;
   width: 100px;
   top: 32px;
@@ -131,6 +132,29 @@ export const Profile = styled.div`
     display: flex;
     flex-direction: column;
   }
+`;
+
+export const Feature = styled(Container)`
+  padding: 150px 0 500px 0;
+  flex-direction: column;
+  align-items: normal;
+  width: 50%;
+`;
+
+export const FeatureCallOut = styled.h2`
+  color: white;
+  font-size: 50px;
+  line-height: normal;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  margin: 0;
+`;
+
+export const Text = styled.p`
+  color: white;
+  font-size: 22px;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
 
 export const Logo = styled.img`

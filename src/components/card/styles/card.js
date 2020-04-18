@@ -6,10 +6,6 @@ export const Container = styled.div`
   margin: 0 3.5rem;
   margin-bottom: 50px;
 
-  &:first-of-type {
-    margin-top: 50px;
-  }
-
   &:last-of-type {
     margin-bottom: 0;
   }
