@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FirebaseContext } from '../context/firebase';
-import { SignInForm } from '../components';
+import { Form } from '../components';
 import { HeaderContainer, FooterContainer } from '../containers';
 import * as ROUTES from '../constants/routes';
 
@@ -33,35 +33,35 @@ export default function Signin() {
   return (
     <>
       <HeaderContainer>
-        <SignInForm>
-          <SignInForm.Title>Sign In</SignInForm.Title>
-          {error && <SignInForm.Error>{error}</SignInForm.Error>}
+        <Form>
+          <Form.Title>Sign In</Form.Title>
+          {error && <Form.Error>{error}</Form.Error>}
 
-          <SignInForm.Base onSubmit={handleSignin} method="POST">
-            <SignInForm.Input
+          <Form.Base onSubmit={handleSignin} method="POST">
+            <Form.Input
               placeholder="Email address"
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />
-            <SignInForm.Input
+            <Form.Input
               type="password"
               value={password}
               autoComplete="off"
               placeholder="Password"
               onChange={({ target }) => setPassword(target.value)}
             />
-            <SignInForm.Submit disabled={isInvalid} type="submit">
+            <Form.Submit disabled={isInvalid} type="submit">
               Sign In
-            </SignInForm.Submit>
-          </SignInForm.Base>
+            </Form.Submit>
+          </Form.Base>
 
-          <SignInForm.Text>
-            New to Netflix? <SignInForm.Link>Sign up now.</SignInForm.Link>
-          </SignInForm.Text>
-          <SignInForm.TextSmall>
+          <Form.Text>
+            New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+          </Form.Text>
+          <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
-          </SignInForm.TextSmall>
-        </SignInForm>
+          </Form.TextSmall>
+        </Form>
       </HeaderContainer>
       <FooterContainer />
     </>

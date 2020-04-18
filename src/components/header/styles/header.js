@@ -37,6 +37,28 @@ export const Group = styled.div`
   align-items: center;
 `;
 
+export const SearchInput = styled.input`
+  background-color: transparent;
+  border: 1px solid white;
+  transition: width 0.5s;
+  height: 30px;
+  font-size: 14px;
+  margin-left: ${(props) => (props.active === true ? '10px' : '0')};
+  padding: ${(props) => (props.active === true ? '0 10px' : '0')};
+  opacity: ${(props) => (props.active === true ? '1' : '0')};
+  width: ${(props) => (props.active === true ? '200px' : '0px')};
+`;
+
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: white;
+    cursor: pointer;
+  }
+`;
+
 export const ButtonLink = styled(ReachRouterLink)`
   display: block;
   background-color: #e50914;
@@ -53,6 +75,61 @@ export const ButtonLink = styled(ReachRouterLink)`
 
   &:hover {
     background: #f40612;
+  }
+`;
+
+export const Picture = styled.button`
+  background: url(${(props) => props.src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
+export const Dropdown = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #ccc;
+  padding: 10px;
+  width: 100px;
+  top: 32px;
+  right: 10px;
+
+  ${Group} {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+    color: white;
+    margin-left: 5px;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
