@@ -33,20 +33,20 @@ export const Base = styled.form`
 
 export const Title = styled.h1`
   color: #fff;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 28px;
 `;
 
 export const Text = styled.h1`
   color: #737373;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
 `;
 
 export const TextSmall = styled.h1`
   margin-top: 10px;
-  font-size: 0.8125rem;
+  font-size: 13px;
   line-height: normal;
   color: #8c8c8c;
 `;

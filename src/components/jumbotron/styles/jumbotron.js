@@ -22,13 +22,13 @@ export const Pane = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3.125rem;
+  font-size: 50px;
   line-height: 1.1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 1.625rem;
+  font-size: 26px;
   font-weight: normal;
   line-height: normal;
 `;

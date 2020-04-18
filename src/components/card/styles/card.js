@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 3.5rem;
   margin-bottom: 50px;
+  box-sizing: border-box;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -17,9 +17,11 @@ export const Group = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #e5e5e5;
   font-weight: bold;
+  margin-left: 56px;
+  margin-right: 56px;
   margin-top: 0;
 `;
 
@@ -83,12 +85,25 @@ export const Item = styled.div`
     z-index: 100;
   }
 
+  &:first-of-type {
+    margin-left: 56px;
+  }
+
   &:last-of-type {
-    margin-right: 0;
+    margin-right: 56px;
   }
 `;
 
 export const Feature = styled.div`
   display: flex;
   flex-direction: row;
+  height: 500px;
+  background: url(${(props) => props.src});
+  background-size: cover;
+`;
+
+export const Content = styled.div`
+  margin-left: 56px;
+  margin-right: 56px;
+  margin-top: 56px;
 `;

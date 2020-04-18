@@ -11,18 +11,18 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: white;
   max-width: 640px;
-  font-size: 3.125rem;
+  font-size: 50px;
   font-weight: 500;
   margin: auto;
 
   @media (min-width: 950px) {
-    font-size: 4rem;
+    font-size: 64px;
   }
 `;
 
 export const SubTitle = styled.h2`
   color: white;
-  font-size: 1.625rem;
+  font-size: 26px;
   font-weight: norma;
-  margin: 1rem auto;
+  margin: 16px auto;
 `;

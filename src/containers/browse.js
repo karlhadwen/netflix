@@ -77,7 +77,7 @@ export default function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
-            <Card.Feature />
+            <Card.Feature selectionType={selection} />
           </Card>
         ))}
       </Card.Group>

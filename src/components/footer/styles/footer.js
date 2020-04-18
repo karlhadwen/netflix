@@ -29,7 +29,7 @@ export const Link = styled.a`
 `;
 
 export const Title = styled.p`
-  font-size: 1rem;
+  font-size: 16px;
   color: #757575;
   margin-bottom: 40px;
   margin-left: 70px;
@@ -37,7 +37,7 @@ export const Title = styled.p`
 `;
 
 export const Text = styled.p`
-  font-size: 0.8125rem;
+  font-size: 13px;
   color: #757575;
   margin-bottom: 40px;
   margin-left: 72px;

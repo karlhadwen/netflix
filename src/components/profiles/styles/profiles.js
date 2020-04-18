@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   width: 100%;
   color: #fff;
-  font-size: 3rem;
+  font-size: 48px;
   text-align: center;
   font-weight: 500;
 `;
@@ -27,7 +27,7 @@ export const List = styled.ul`
 export const Name = styled.p`
   color: #808080;
   text-overflow: ellipsis;
-  font-size: 1rem;
+  font-size: 16px;
 
   &:hover {
     font-weight: bold;

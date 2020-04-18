@@ -29,8 +29,8 @@ export const Button = styled.button`
   background: #e50914;
   color: white;
   text-transform: uppercase;
-  padding: 0 2rem;
-  font-size: 1.625rem;
+  padding: 0 32px;
+  font-size: 26px;
   border: 0;
   cursor: pointer;
 
@@ -40,6 +40,6 @@ export const Button = styled.button`
 `;
 
 export const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 19.2px;
   color: white;
 `;

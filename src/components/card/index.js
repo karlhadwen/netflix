@@ -1,6 +1,6 @@
-import React, { useState, useContext, createContext, createRef } from 'react';
+import React, { useState, useContext, createContext } from 'react';
 
-import { Container, Group, Title, SubTitle, Text, Feature, Meta, Entities, Item, Image } from './styles/card';
+import { Container, Group, Title, SubTitle, Text, Feature, Content, Meta, Entities, Item, Image } from './styles/card';
 
 export const FeatureContext = createContext();
 
@@ -44,7 +44,7 @@ Card.Meta = function CardMeta({ children, ...restProps }) {
 };
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
-  const { showFeature, setShowFeature, setItemFeature } = useContext(FeatureContext);
+  const { setShowFeature, setItemFeature } = useContext(FeatureContext);
 
   return (
     <Item
@@ -63,10 +63,14 @@ Card.Image = function CardImage({ ...restProps }) {
   return <Image {...restProps} />;
 };
 
-Card.Feature = function CardFeature({ ...restProps }) {
+Card.Feature = function CardFeature({ selectionType, ...restProps }) {
   const { showFeature, itemFeature } = useContext(FeatureContext);
 
-  return showFeature ? <Feature>{JSON.stringify(itemFeature)}</Feature> : null;
+  return showFeature ? (
+    <Feature src={`/images/${selectionType}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
+      <Content>{JSON.stringify(itemFeature)}</Content>
+    </Feature>
+  ) : null;
 };
 
 // loading state on cards (placeholder)
