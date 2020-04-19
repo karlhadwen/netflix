@@ -36,7 +36,7 @@ export default function BrowseContainer({ slides }) {
           </Header.Group>
           <Header.Group>
             <Header.Search />
-            <Header.Profile onClick={() => console.log('hellooooooooooooo')}>
+            <Header.Profile>
               <Header.Picture src={`/images/users/${user.photoURL}.png`} />
               <Header.Dropdown>
                 <Header.Group>
