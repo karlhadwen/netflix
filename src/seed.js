@@ -105,43 +105,144 @@ export function seedDatabase(firebase) {
   });
 
   // Children
-  for (let index = 0; index < 5; index += 1) {
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Peppa Pig',
-      description:
-        'Peppa, an outgoing preschool pig, participates in many energetic activities. She learns something new every day and has a lot of fun with her family and friends.',
-      genre: 'children',
-      maturity: '0',
-      slug: 'peppa-pig',
-    });
-  }
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Peppa Pig',
+    description:
+      'Peppa, an outgoing preschool pig, participates in many energetic activities. She learns something new every day and has a lot of fun with her family and friends.',
+    genre: 'children',
+    maturity: '0',
+    slug: 'peppa-pig',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Dora The Explorer',
+    description:
+      'Dora, a seven-year-old girl of Latin American descent, embarks upon numerous adventures in the wilderness with her friend Boots, a monkey, and a variety of fun and useful tools.',
+    genre: 'children',
+    maturity: '0',
+    slug: 'dora-the-explorer',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'PAW Patrol',
+    description:
+      'Six brave puppies, captained by a tech-savvy ten-year-old boy, Ryder, work together to accomplish high-stakes rescue missions to safeguard the residents of the Adventure Bay community.',
+    genre: 'children',
+    maturity: '0',
+    slug: 'paw-patrol',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Arthur',
+    description:
+      'Bespectacled aardvark Arthur Read demonstrates to kids how to deal with such childhood traumas and challenges as homework, teachers and bullies.',
+    genre: 'children',
+    maturity: '0',
+    slug: 'arthur',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'SpongeBob',
+    description:
+      'A yellow sea sponge named SpongeBob SquarePants lives in the city of Bikini Bottom deep in the Pacific Ocean. ',
+    genre: 'children',
+    maturity: '0',
+    slug: 'spongebob',
+  });
 
   // Crime
-  for (let index = 0; index < 5; index += 1) {
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Making a Murderer',
-      description:
-        'Exonerated after spending nearly two decades in prison for a crime he did not commit, Steven Avery filed suit against Manitowoc County, Wis., and several individuals involved with his arrest.',
-      genre: 'crime',
-      maturity: '18',
-      slug: 'making-a-murderer',
-    });
-  }
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Making a Murderer',
+    description:
+      'Exonerated after spending nearly two decades in prison for a crime he did not commit, Steven Avery filed suit against Manitowoc County, Wis., and several individuals involved with his arrest.',
+    genre: 'crime',
+    maturity: '18',
+    slug: 'making-a-murderer',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Long Shot',
+    description:
+      'An innocent man is accused of murder, leading his attorney on a wild chase to confirm his alibi using raw footage from a television show.',
+    genre: 'crime',
+    maturity: '18',
+    slug: 'long-shot',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'The Confession Killer',
+    description: '',
+    genre: 'crime',
+    maturity: '18',
+    slug: 'the-confession-killer',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'The Innocent Man',
+    description:
+      'Henry Lee Lucas was an American convicted serial killer whose crimes spanned from 1960 to 1983. He was convicted of murdering eleven people and condemned to death for the murder of Debra Jackson.',
+    genre: 'crime',
+    maturity: '18',
+    slug: 'the-innocent-man',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'The Staircase',
+    description:
+      "In 2001 novelist Michael Peterson's wife died, and he claimed she perished after falling down stairs at their home. The medical examiner, however, determined that she had been beaten with a weapon",
+    genre: 'crime',
+    maturity: '18',
+    slug: 'the-staircase',
+  });
 
   // Feel-good
-  for (let index = 0; index < 5; index += 1) {
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Good Will Hunting',
-      description:
-        'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
-      genre: 'feel-good',
-      maturity: '15',
-      slug: 'good-will-hunting',
-    });
-  }
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Good Will Hunting',
+    description:
+      'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
+    genre: 'feel-good',
+    maturity: '12',
+    slug: 'good-will-hunting',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Forrest Gump',
+    description:
+      'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
+    genre: 'feel-good',
+    maturity: '12',
+    slug: 'forrest-gump',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Juno',
+    description:
+      "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
+    genre: 'feel-good',
+    maturity: '12',
+    slug: 'juno',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Midnight In Paris',
+    description:
+      'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
+    genre: 'feel-good',
+    maturity: '12',
+    slug: 'midnight-in-paris',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'School of Rock',
+    description:
+      "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
+    genre: 'feel-good',
+    maturity: '12',
+    slug: 'school-of-rock',
+  });
 
   /* Films
     ============================================ */
