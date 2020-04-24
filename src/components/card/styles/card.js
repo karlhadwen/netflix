@@ -64,6 +64,7 @@ export const Image = styled.img`
   border: 0;
   width: 100%;
   max-width: 305px;
+  cursor: pointer;
   height: auto;
   padding: 0;
   margin: 0;
@@ -100,9 +101,12 @@ export const Feature = styled.div`
   display: flex;
   flex-direction: row;
   background: url(${({ src }) => src});
-  background-size: cover;
+  background-size: contain;
   position: relative;
   height: 500px;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-color: black;
 `;
 
 export const FeatureTitle = styled(Title)`
