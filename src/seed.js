@@ -13,29 +13,96 @@ export function seedDatabase(firebase) {
   /* Series
     ============================================ */
   // Documentaries
-  for (let index = 0; index < 5; index += 1) {
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Tiger King',
-      description: 'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
-      genre: 'documentaries',
-      maturity: '18',
-      slug: 'tiger-king',
-    });
-  }
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Tiger King',
+    description: 'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
+    genre: 'documentaries',
+    maturity: '18',
+    slug: 'tiger-king',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Amanda Knox',
+    description: 'Amanda Marie Knox is an American woman who spent almost four years in an Italian prison.',
+    genre: 'documentaries',
+    maturity: '12',
+    slug: 'amanda-knox',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Citizenfour',
+    description:
+      'Citizenfour is a 2014 documentary film directed by Laura Poitras, concerning Edward Snowden and the NSA spying scandal.',
+    genre: 'documentaries',
+    maturity: '12',
+    slug: 'citizenfour',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Super Size Me',
+    description:
+      "Director Morgan Spurlock's social experiment in fast-food gastronomy sees him attempting to subsist uniquely on food from the McDonalds",
+    genre: 'documentaries',
+    maturity: '12',
+    slug: 'super-size-me',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Man on Wire',
+    description:
+      "Filmmaker James Marsh masterfully recreates high-wire daredevil Philippe Petit's 1974 stunt walking on a wire across the Twin Towers.",
+    genre: 'documentaries',
+    maturity: '12',
+    slug: 'man-on-wire',
+  });
 
   // Comedies
-  for (let index = 0; index < 5; index += 1) {
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'The Office',
-      description:
-        'A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.',
-      genre: 'comedies',
-      maturity: '15',
-      slug: 'the-office',
-    });
-  }
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'The Office',
+    description:
+      'A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.',
+    genre: 'comedies',
+    maturity: '15',
+    slug: 'the-office',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Arrested Development',
+    description:
+      'The Bluth family, once a prominent name in the business, loses everything after the head patriarch gets convicted for fraud.',
+    genre: 'comedies',
+    maturity: '15',
+    slug: 'arrested-development',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Curb Your Enthusiasm',
+    description:
+      'Larry David, a famous television writer and producer, gets into various misadventures with his friends and celebrity colleagues in Los Angeles.',
+    genre: 'comedies',
+    maturity: '15',
+    slug: 'curb-your-enthusiasm',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'Family Guy',
+    description:
+      'Peter Griffin and his family of two teenagers, a smart dog, a devilish baby and his wife find themselves in some of the most hilarious scenarios.',
+    genre: 'comedies',
+    maturity: '15',
+    slug: 'family-guy',
+  });
+  firebase.firestore().collection('series').add({
+    id: getUUID(),
+    title: 'South Park',
+    description:
+      'Four young, schoolgoing boys, Stan Marsh, Kyle Broflovski, Eric Cartman and Kenny McCormick, who live in South Park set out on various adventures.',
+    genre: 'comedies',
+    maturity: '15',
+    slug: 'south-park',
+  });
 
   // Children
   for (let index = 0; index < 5; index += 1) {

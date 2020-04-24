@@ -2,7 +2,7 @@ import React, { useState, useContext, createContext } from 'react';
 import AddIcon from '@material-ui/icons/Add';
 import { Container, Frame, Title, Item, Inner, Header, Body } from './styles/accordion';
 
-export const ToggleContext = createContext();
+const ToggleContext = createContext();
 
 export default function Accordion({ children, ...restProps }) {
   return (
