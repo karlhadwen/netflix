@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   display: flex;
@@ -103,7 +103,7 @@ export const Feature = styled.div`
   background: url(${({ src }) => src});
   background-size: contain;
   position: relative;
-  height: 500px;
+  height: 360px;
   background-position-x: right;
   background-repeat: no-repeat;
   background-color: black;
@@ -115,24 +115,48 @@ export const FeatureTitle = styled(Title)`
 
 export const FeatureText = styled.p`
   font-size: 18px;
-  color: #999;
+  color: white;
   font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
   margin: 0;
 `;
 
 export const Content = styled.div`
-  margin-left: 56px;
-  margin-right: 56px;
-  margin-top: 56px;
+  margin: 56px;
   max-width: 500px;
   line-height: normal;
 
-  svg {
+  svg.cancel {
     color: white;
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
+  }
+`;
+
+export const PlayButton = styled.button`
+  background-color: #e50914;
+  border-color: #ff0a16;
+  width: 115px;
+  height: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #ff0a16;
+  }
+
+  svg.play {
+    margin-right: 5px;
   }
 `;
 
@@ -144,6 +168,7 @@ export const Maturity = styled.div`
   text-align: center;
   color: white;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
+  font-size: 12px;
 `;
