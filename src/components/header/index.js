@@ -69,8 +69,8 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
   return <Feature>{children}</Feature>;
 };
 
-Header.Picture = function HeaderPicture({ ...restProps }) {
-  return <Picture {...restProps} />;
+Header.Picture = function HeaderPicture({ src, ...restProps }) {
+  return <Picture {...restProps} src={`/images/users/${src}.png`} />;
 };
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {

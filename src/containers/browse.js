@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
-import { Card, Header, Loading } from '../components';
+import { Card, Header, Loading, Player } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 import { FirebaseContext } from '../context/firebase';
@@ -40,7 +40,7 @@ export function BrowseContainer({ slides }) {
 
   return profile.displayName ? (
     <>
-      {loading ? <Loading src={`/images/users/${user.photoURL}.png`} /> : <Loading.ReleaseBody />}
+      {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
       <Header src="joker1">
         <Header.Frame>
@@ -56,14 +56,11 @@ export function BrowseContainer({ slides }) {
           <Header.Group>
             <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
-              <Header.Picture src={`/images/users/${user.photoURL}.png`} />
+              <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
                 <Header.Group>
-                  <Header.Picture src={`/images/users/${user.photoURL}.png`} />
+                  <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
-                </Header.Group>
-                <Header.Group>
-                  <Header.TextLink onClick={() => console.log('favourites')}>Favourites</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
                   <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out</Header.TextLink>
@@ -99,7 +96,12 @@ export function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
-            <Card.Feature category={category} />
+            <Card.Feature category={category}>
+              <Player>
+                <Player.Button />
+                <Player.Video />
+              </Player>
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>

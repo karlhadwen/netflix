@@ -134,32 +134,6 @@ export const Content = styled.div`
   }
 `;
 
-export const PlayButton = styled.button`
-  background-color: #e50914;
-  border-color: #ff0a16;
-  width: 115px;
-  height: 45px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: white;
-  font-size: 18px;
-  height: 45px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 0;
-
-  &:hover {
-    transform: scale(1.05);
-    background-color: #ff0a16;
-  }
-
-  svg.play {
-    margin-right: 5px;
-  }
-`;
-
 export const Maturity = styled.div`
   background-color: ${({ rating }) => (rating >= 15 ? 'red' : 'green')};
   border-radius: 15px;

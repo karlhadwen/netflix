@@ -98,11 +98,19 @@ export const Dropdown = styled.div`
   top: 32px;
   right: 10px;
 
+  ${Group}:last-of-type ${Link} {
+    cursor: pointer;
+  }
+
   ${Group} {
     margin-bottom: 10px;
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+
+    ${Link}, ${Picture} {
+      cursor: default;
     }
   }
 
@@ -121,12 +129,16 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
   margin-left: 20px;
-  cursor: pointer;
   position: relative;
 
   svg {
     color: white;
     margin-left: 5px;
+  }
+
+  button,
+  svg {
+    cursor: pointer;
   }
 
   &:hover > ${Dropdown} {

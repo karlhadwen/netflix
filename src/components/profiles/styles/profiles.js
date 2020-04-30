@@ -40,6 +40,7 @@ export const Picture = styled.img`
   max-width: 150px;
   height: auto;
   border: 3px solid black;
+  cursor: pointer;
 `;
 
 export const Item = styled.li`
@@ -48,7 +49,6 @@ export const Item = styled.li`
   list-style-type: none;
   text-align: center;
   margin-right: 30px;
-  cursor: pointer;
 
   &:hover > ${Picture} {
     border: 3px solid white;

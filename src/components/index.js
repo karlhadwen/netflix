@@ -8,3 +8,4 @@ export { default as Profiles } from './profiles';
 export { default as Footer } from './footer';
 export { default as Header } from './header';
 export { default as Loading } from './loading';
+export { default as Player } from './player';
