@@ -1,6 +1,5 @@
 import React, { useState, useContext, createContext } from 'react';
 import CancelIcon from '@material-ui/icons/Cancel';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 import {
   Container,
@@ -17,7 +16,6 @@ import {
   Entities,
   Item,
   Image,
-  PlayButton,
 } from './styles/card';
 
 export const FeatureContext = createContext();
@@ -77,11 +75,7 @@ Card.Image = function CardImage({ ...restProps }) {
   return <Image {...restProps} />;
 };
 
-Card.PlayButton = function CardPlayButton({ children, ...restProps }) {
-  return <PlayButton>{children}</PlayButton>;
-};
-
-Card.Feature = function CardFeature({ category, ...restProps }) {
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
   const { showFeature, itemFeature, setShowFeature } = useContext(FeatureContext);
 
   return showFeature ? (
@@ -97,10 +91,8 @@ Card.Feature = function CardFeature({ category, ...restProps }) {
             {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
           </FeatureText>
         </Group>
-        <PlayButton>
-          <PlayArrowIcon className="play" />
-          Play
-        </PlayButton>
+
+        {children}
       </Content>
     </Feature>
   ) : null;
