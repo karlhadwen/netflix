@@ -1,13 +1,17 @@
 import React from 'react';
-import { Container, Inner, Pane, Title, SubTitle, Image } from './styles/jumbotron';
+import { Container, Item, Inner, Pane, Title, SubTitle, Image } from './styles/jumbotron';
 
 export default function Jumbotron({ children, direction = 'row', ...restProps }) {
   return (
-    <Container {...restProps}>
+    <Item {...restProps}>
       <Inner direction={direction}>{children}</Inner>
-    </Container>
+    </Item>
   );
 }
+
+Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
+};
 
 Jumbotron.Pane = function JumbotronPane({ children, ...restProps }) {
   return <Pane {...restProps}>{children}</Pane>;

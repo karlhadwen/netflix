@@ -1,9 +1,9 @@
 import React from 'react';
-import { Feature, OptForm, Jumbotron } from '../components';
+import { Feature, OptForm } from '../components';
 import { HeaderContainer } from '../containers/header';
+import { JumbotronContainer } from '../containers/jumbotron';
 import { FaqsContainer } from '../containers/faqs';
 import { FooterContainer } from '../containers/footer';
-import jumboData from '../fixtures/jumbo';
 
 export default function Home() {
   return (
@@ -21,18 +21,7 @@ export default function Home() {
         </Feature>
       </HeaderContainer>
 
-      {jumboData.map((item) => (
-        <Jumbotron key={item.id} direction={item.direction}>
-          <Jumbotron.Pane>
-            <Jumbotron.Title>{item.title}</Jumbotron.Title>
-            <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
-          </Jumbotron.Pane>
-          <Jumbotron.Pane>
-            <Jumbotron.Image src={item.image} alt={item.alt} />
-          </Jumbotron.Pane>
-        </Jumbotron>
-      ))}
-
+      <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />
     </>

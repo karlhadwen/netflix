@@ -6,10 +6,16 @@ export const Container = styled.div`
   height: 100%;
   margin-top: 20px;
   flex-wrap: wrap;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Input = styled.input`
-  min-width: 450px;
+  max-width: 450px;
+  width: 100%;
   border: 0;
   padding: 10px;
   height: 70px;
@@ -37,9 +43,22 @@ export const Button = styled.button`
   &:hover {
     background: #f40612;
   }
+
+  @media (max-width: 1000px) {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 19.2px;
   color: white;
+  text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
