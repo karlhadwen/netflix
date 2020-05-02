@@ -6,6 +6,10 @@ export const Background = styled.div`
   flex-direction: column;
   background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
     no-repeat;
+
+  @media (max-width: 1100px) {
+    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+  }
 `;
 
 export const Container = styled.div`
@@ -15,6 +19,14 @@ export const Container = styled.div`
   padding: 18px 0;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    display: flex;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 0 30px;
+  }
 `;
 
 export const Link = styled.p`
@@ -39,7 +51,7 @@ export const Group = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  background-color: transparent;
+  background-color: #44444459;
   color: white;
   border: 1px solid white;
   transition: width 0.5s;
@@ -58,6 +70,10 @@ export const Search = styled.div`
   svg {
     color: white;
     cursor: pointer;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
 
@@ -152,6 +168,10 @@ export const Feature = styled(Container)`
   flex-direction: column;
   align-items: normal;
   width: 50%;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;
 
 export const FeatureCallOut = styled.h2`

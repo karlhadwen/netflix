@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   border-bottom: 8px solid #222;
   text-align: center;
-  padding: 165px 0;
+  padding: 165px 45px;
 `;
 
 export const Title = styled.h1`
@@ -15,14 +15,18 @@ export const Title = styled.h1`
   font-weight: 500;
   margin: auto;
 
-  @media (min-width: 950px) {
-    font-size: 64px;
+  @media (max-width: 600px) {
+    font-size: 35px;
   }
 `;
 
 export const SubTitle = styled.h2`
   color: white;
   font-size: 26px;
-  font-weight: norma;
+  font-weight: normal;
   margin: 16px auto;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;

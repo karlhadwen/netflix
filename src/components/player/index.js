@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createRef, createContext } from 'react';
+import React, { useState, useContext, createContext } from 'react';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ReactDOM from 'react-dom';
 import { Container, Button, Overlay, Inner } from './styles/player';

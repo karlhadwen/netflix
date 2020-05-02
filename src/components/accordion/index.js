@@ -1,5 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
 import AddIcon from '@material-ui/icons/Add';
+import CloseIcon from '@material-ui/icons/Close';
 import { Container, Frame, Title, Item, Inner, Header, Body } from './styles/accordion';
 
 const ToggleContext = createContext();
@@ -36,7 +37,7 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   return (
     <Header onClick={() => setToggleShow(!toggleShow)} {...restProps}>
       {children}
-      <AddIcon fontSize="large" />
+      {toggleShow ? <CloseIcon fontSize="large" /> : <AddIcon fontSize="large" />}
     </Header>
   );
 };
