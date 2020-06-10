@@ -1,5 +1,4 @@
 import React, { useState, useContext, createContext } from 'react';
-import CancelIcon from '@material-ui/icons/Cancel';
 
 import {
   Container,
@@ -10,6 +9,7 @@ import {
   Feature,
   FeatureTitle,
   FeatureText,
+  FeatureClose,
   Maturity,
   Content,
   Meta,
@@ -83,7 +83,9 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
       <Content>
         <FeatureTitle>{itemFeature.title}</FeatureTitle>
         <FeatureText>{itemFeature.description}</FeatureText>
-        <CancelIcon className="cancel" fontSize="large" onClick={() => setShowFeature(false)} />
+        <FeatureClose onClick={() => setShowFeature(false)}>
+          <img src="/images/icons/close.png" alt="Close" />
+        </FeatureClose>
 
         <Group margin="30px 0" flexDirection="row" alignItems="center">
           <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>

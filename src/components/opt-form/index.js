@@ -1,5 +1,4 @@
 import React from 'react';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Container, Input, Break, Button, Text } from './styles/opt-form';
 
 export default function OptForm({ children, ...restProps }) {
@@ -13,7 +12,7 @@ OptForm.Input = function OptFormInput({ ...restProps }) {
 OptForm.Button = function OptFormButton({ children, ...restProps }) {
   return (
     <Button {...restProps}>
-      {children} <ChevronRightIcon fontSize="large" />
+      {children} <img src="/images/icons/chevron-right.png" alt="Try Now" />
     </Button>
   );
 };
