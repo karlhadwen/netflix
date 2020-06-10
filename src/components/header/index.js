@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link as ReachRouterLink } from 'react-router-dom';
 import {
   Container,
@@ -12,6 +10,7 @@ import {
   Search,
   Profile,
   FeatureCallOut,
+  SearchIcon,
   SearchInput,
   ButtonLink,
   PlayButton,
@@ -45,7 +44,9 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
 
   return (
     <Search {...restProps}>
-      <SearchIcon onClick={() => setSearchActive(!searchActive)} />
+      <SearchIcon onClick={() => setSearchActive(!searchActive)}>
+        <img src="/images/icons/search.png" alt="Search" />
+      </SearchIcon>
       <SearchInput
         value={searchTerm}
         onChange={({ target }) => setSearchTerm(target.value)}
@@ -57,12 +58,7 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
 };
 
 Header.Profile = function HeaderProfile({ children, ...restProps }) {
-  return (
-    <Profile {...restProps}>
-      {children}
-      <ArrowDropDownIcon />
-    </Profile>
-  );
+  return <Profile {...restProps}>{children}</Profile>;
 };
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {

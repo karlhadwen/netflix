@@ -81,8 +81,4 @@ export const Button = styled.button`
     transform: scale(1.05);
     background-color: #ff0a16;
   }
-
-  svg.play {
-    margin-right: 5px;
-  }
 `;

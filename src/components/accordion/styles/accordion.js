@@ -51,6 +51,11 @@ export const Header = styled.div`
   user-select: none;
   align-items: center;
 
+  img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+  }
+
   @media (max-width: 600px) {
     font-size: 16px;
   }

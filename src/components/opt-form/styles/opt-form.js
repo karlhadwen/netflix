@@ -40,6 +40,12 @@ export const Button = styled.button`
   border: 0;
   cursor: pointer;
 
+  img {
+    margin-left: 10px;
+    filter: brightness(0) invert(1);
+    width: 24px;
+  }
+
   &:hover {
     background: #f40612;
   }

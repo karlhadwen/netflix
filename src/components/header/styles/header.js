@@ -77,6 +77,17 @@ export const Search = styled.div`
   }
 `;
 
+export const SearchIcon = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 16px;
+  }
+`;
+
 export const ButtonLink = styled(ReachRouterLink)`
   display: block;
   background-color: #e50914;
@@ -147,13 +158,7 @@ export const Profile = styled.div`
   margin-left: 20px;
   position: relative;
 
-  svg {
-    color: white;
-    margin-left: 5px;
-  }
-
-  button,
-  svg {
+  button {
     cursor: pointer;
   }
 

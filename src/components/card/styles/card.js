@@ -156,18 +156,25 @@ export const FeatureTitle = styled(Title)`
   margin-left: 0;
 `;
 
+export const FeatureClose = styled.button`
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+  }
+`;
+
 export const Content = styled.div`
   margin: 56px;
   max-width: 500px;
   line-height: normal;
-
-  svg.cancel {
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-  }
 
   @media (max-width: 1000px) {
     margin: 30px;
