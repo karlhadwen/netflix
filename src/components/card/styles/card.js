@@ -124,6 +124,10 @@ export const FeatureText = styled.p`
   color: white;
   font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
   margin: 0;
+
+  @media (max-width: 600px) {
+    line-height: 22px;
+  }
 `;
 
 export const Feature = styled.div`
