@@ -1,6 +1,6 @@
 ## Building Netflix from Scratch Using React (Custom Hooks, Context, Portal), Firebase, Compound & Styled Components (http://bit.ly/CognitiveSurge)
 
-This application (a Netflix clone) was built using React (Custom Hooks, Context), Firebase & Styled Components. I built this Netflix clone for Scrimba (https://scrimba.com)--Scrimba allows you to learn to code with interactive tutorials. The course itself is over 7 hours long and is available to watch on Scrimba's front-end engineering career path: https://scrimba.com/path/gfrontend - I highly recommend it, there's lots of awesome content! 70 hours of content, and 100+ coding challenges, so be sure to check it out!
+This application (a Netflix clone) was built using React (Custom Hooks, Context), Firebase & Styled Components. I built this Netflix clone for Scrimba (https://scrimba.com) -- Scrimba allows you to learn to code with interactive tutorials. The course itself is over 7 hours long and is available to watch on Scrimba's front-end engineering career path: https://scrimba.com/path/gfrontend - I highly recommend it, there's lots of awesome content! 70 hours of content, and 100+ coding challenges, so be sure to check it out!
 
 I have built the following pages within this application: sign in, sign up, browse & lastly the homepage. There's four different pages, some using protected routes with auth listeners. Firebase firestore handles all the data and that data is retrieved using a custom hook; authentication is used on all pages, which is handled by Firebase as well.
 
