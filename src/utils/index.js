@@ -1,1 +1,1 @@
-export { default as selectionMap } from './selection-map';
+export { default as selectionFilter } from './selection-filter';

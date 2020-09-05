@@ -6,7 +6,7 @@ import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
 import * as ROUTES from '../constants/routes';
 
-export default function Signup() {
+export default function SignUp() {
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
 
@@ -34,6 +34,7 @@ export default function Signup() {
           })
       )
       .catch((error) => {
+        setFirstName('');
         setEmailAddress('');
         setPassword('');
         setError(error.message);
@@ -49,7 +50,7 @@ export default function Signup() {
 
           <Form.Base onSubmit={handleSignup} method="POST">
             <Form.Input
-              placeholder="First Name"
+              placeholder="First name"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             />
@@ -65,7 +66,7 @@ export default function Signup() {
               placeholder="Password"
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid} type="submit">
+            <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-up">
               Sign Up
             </Form.Submit>
           </Form.Base>

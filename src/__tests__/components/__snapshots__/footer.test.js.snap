@@ -2,132 +2,132 @@
 
 exports[`<Footer /> renders the <Footer /> with populated data 1`] = `
 <div
-  class="footer__Container-qu6i6-0 eXeiyM"
+  class="footer__Container-qu6i6-0 iPlSJv"
 >
   <p
-    class="footer__Title-qu6i6-4 fqDErC"
+    class="footer__Title-qu6i6-4 jqyOrZ"
   >
     Questions? Contact us.
   </p>
   <div
-    class="footer__Break-qu6i6-6 fGLNpJ"
+    class="footer__Break-qu6i6-6 bMqiUq"
   />
   <div
-    class="footer__Row-qu6i6-2 cWmqEQ"
+    class="footer__Row-qu6i6-2 eGkNdj"
   >
     <div
-      class="footer__Column-qu6i6-1 kAmRkb"
+      class="footer__Column-qu6i6-1 eTQzvA"
     >
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         FAQ
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Investor Relations
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Ways to Watch
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Corporate Information
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Netflix Originals
       </a>
     </div>
     <div
-      class="footer__Column-qu6i6-1 kAmRkb"
+      class="footer__Column-qu6i6-1 eTQzvA"
     >
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Help Centre
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Jobs
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Terms of Use
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Contact Us
       </a>
     </div>
     <div
-      class="footer__Column-qu6i6-1 kAmRkb"
+      class="footer__Column-qu6i6-1 eTQzvA"
     >
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Account
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Redeem gift cards
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Privacy
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Speed Test
       </a>
     </div>
     <div
-      class="footer__Column-qu6i6-1 kAmRkb"
+      class="footer__Column-qu6i6-1 eTQzvA"
     >
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Media Centre
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Buy gift cards
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Cookie Preferences
       </a>
       <a
-        class="footer__Link-qu6i6-3 jgbbOD"
+        class="footer__Link-qu6i6-3 klRjRo"
         href="#"
       >
         Legal Notices
@@ -135,10 +135,10 @@ exports[`<Footer /> renders the <Footer /> with populated data 1`] = `
     </div>
   </div>
   <div
-    class="footer__Break-qu6i6-6 fGLNpJ"
+    class="footer__Break-qu6i6-6 bMqiUq"
   />
   <p
-    class="footer__Text-qu6i6-5 hYWbzL"
+    class="footer__Text-qu6i6-5 gurtgw"
   >
     Netflix United Kingdom
   </p>

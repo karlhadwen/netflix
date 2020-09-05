@@ -2,37 +2,37 @@
 
 exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
 <div
-  class="card__Group-s87lnr-2 hBiKMf"
+  class="card__Group-s87lnr-2 iYJwJU"
 >
   <div
-    class="card__Container-s87lnr-1 caHgNs"
+    class="card__Container-s87lnr-1 gHwFSP"
   >
     <p
-      class="card__Title-s87lnr-0 jdOPJc"
+      class="card__Title-s87lnr-0 kUjNdn"
     >
       Documentaries
     </p>
     <div
-      class="card__Entities-s87lnr-5 iaKoMf"
+      class="card__Entities-s87lnr-5 iqDGmA"
     >
       <div
-        class="card__Item-s87lnr-8 gcsINQ"
+        class="card__Item-s87lnr-8 jXbNmb"
         data-testid="tiger-king-item-feature"
       >
         <img
-          class="card__Image-s87lnr-7 gEGNYf"
+          class="card__Image-s87lnr-7 jddFU"
           src="/images/series/documentaries/tiger-king/small.jpg"
         />
         <div
-          class="card__Meta-s87lnr-6 fxzWML"
+          class="card__Meta-s87lnr-6 kVbVwI"
         >
           <p
-            class="card__SubTitle-s87lnr-3 eKKtKc"
+            class="card__SubTitle-s87lnr-3 gbbwjH"
           >
             Tiger King
           </p>
           <p
-            class="card__Text-s87lnr-4 bRMPYp"
+            class="card__Text-s87lnr-4 imJwNe"
           >
             Tiger King description
           </p>
@@ -41,34 +41,34 @@ exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
     </div>
   </div>
   <div
-    class="card__Container-s87lnr-1 caHgNs"
+    class="card__Container-s87lnr-1 gHwFSP"
   >
     <p
-      class="card__Title-s87lnr-0 jdOPJc"
+      class="card__Title-s87lnr-0 kUjNdn"
     >
       Feel Good
     </p>
     <div
-      class="card__Entities-s87lnr-5 iaKoMf"
+      class="card__Entities-s87lnr-5 iqDGmA"
     >
       <div
-        class="card__Item-s87lnr-8 gcsINQ"
+        class="card__Item-s87lnr-8 jXbNmb"
         data-testid="juno-item-feature"
       >
         <img
-          class="card__Image-s87lnr-7 gEGNYf"
+          class="card__Image-s87lnr-7 jddFU"
           src="/images/series/feel-good/juno/small.jpg"
         />
         <div
-          class="card__Meta-s87lnr-6 fxzWML"
+          class="card__Meta-s87lnr-6 kVbVwI"
         >
           <p
-            class="card__SubTitle-s87lnr-3 eKKtKc"
+            class="card__SubTitle-s87lnr-3 gbbwjH"
           >
             Juno
           </p>
           <p
-            class="card__Text-s87lnr-4 bRMPYp"
+            class="card__Text-s87lnr-4 imJwNe"
           >
             Juno description
           </p>
@@ -81,36 +81,36 @@ exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
 
 exports[`<Card /> renders the <Card /> with populated data 1`] = `
 <div
-  class="card__Group-s87lnr-2 hBiKMf"
+  class="card__Group-s87lnr-2 iYJwJU"
 >
   <div
-    class="card__Container-s87lnr-1 caHgNs"
+    class="card__Container-s87lnr-1 gHwFSP"
   >
     <p
-      class="card__Title-s87lnr-0 jdOPJc"
+      class="card__Title-s87lnr-0 kUjNdn"
     >
       Documentaries
     </p>
     <div
-      class="card__Entities-s87lnr-5 iaKoMf"
+      class="card__Entities-s87lnr-5 iqDGmA"
     >
       <div
-        class="card__Item-s87lnr-8 gcsINQ"
+        class="card__Item-s87lnr-8 jXbNmb"
       >
         <img
-          class="card__Image-s87lnr-7 gEGNYf"
+          class="card__Image-s87lnr-7 jddFU"
           src="/images/series/documentaries/tiger-king/small.jpg"
         />
         <div
-          class="card__Meta-s87lnr-6 fxzWML"
+          class="card__Meta-s87lnr-6 kVbVwI"
         >
           <p
-            class="card__SubTitle-s87lnr-3 eKKtKc"
+            class="card__SubTitle-s87lnr-3 gbbwjH"
           >
             Tiger King
           </p>
           <p
-            class="card__Text-s87lnr-4 bRMPYp"
+            class="card__Text-s87lnr-4 imJwNe"
           >
             Tiger King description
           </p>
@@ -119,33 +119,33 @@ exports[`<Card /> renders the <Card /> with populated data 1`] = `
     </div>
   </div>
   <div
-    class="card__Container-s87lnr-1 caHgNs"
+    class="card__Container-s87lnr-1 gHwFSP"
   >
     <p
-      class="card__Title-s87lnr-0 jdOPJc"
+      class="card__Title-s87lnr-0 kUjNdn"
     >
       Feel Good
     </p>
     <div
-      class="card__Entities-s87lnr-5 iaKoMf"
+      class="card__Entities-s87lnr-5 iqDGmA"
     >
       <div
-        class="card__Item-s87lnr-8 gcsINQ"
+        class="card__Item-s87lnr-8 jXbNmb"
       >
         <img
-          class="card__Image-s87lnr-7 gEGNYf"
+          class="card__Image-s87lnr-7 jddFU"
           src="/images/series/feel-good/juno/small.jpg"
         />
         <div
-          class="card__Meta-s87lnr-6 fxzWML"
+          class="card__Meta-s87lnr-6 kVbVwI"
         >
           <p
-            class="card__SubTitle-s87lnr-3 eKKtKc"
+            class="card__SubTitle-s87lnr-3 gbbwjH"
           >
             Juno
           </p>
           <p
-            class="card__Text-s87lnr-4 bRMPYp"
+            class="card__Text-s87lnr-4 imJwNe"
           >
             Juno description
           </p>

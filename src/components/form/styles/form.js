@@ -38,13 +38,13 @@ export const Title = styled.h1`
   margin-bottom: 28px;
 `;
 
-export const Text = styled.h1`
+export const Text = styled.p`
   color: #737373;
   font-size: 16px;
   font-weight: 500;
 `;
 
-export const TextSmall = styled.h1`
+export const TextSmall = styled.p`
   margin-top: 10px;
   font-size: 13px;
   line-height: normal;
