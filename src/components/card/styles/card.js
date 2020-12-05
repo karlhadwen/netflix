@@ -13,7 +13,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  box-sizing: border-box;
 
   > ${Title} {
     @media (max-width: 1000px) {
@@ -34,7 +33,7 @@ export const Group = styled.div`
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
-      margin-top: -150px;
+      margin-top: -100px;
     }
   }
 `;
@@ -187,10 +186,10 @@ export const Content = styled.div`
 `;
 
 export const Maturity = styled.div`
-  background-color: ${({ rating }) => (rating >= 15 ? 'red' : 'green')};
+  background-color: ${({ rating }) => (rating >= 15 ? '#f44336' : '#2f9600')};
   border-radius: 15px;
-  width: 20px;
-  padding: 5px;
+  width: 28px;
+  line-height: 28px;
   text-align: center;
   color: white;
   font-weight: bold;
