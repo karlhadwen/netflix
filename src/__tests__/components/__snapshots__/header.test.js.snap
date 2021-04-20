@@ -2,11 +2,11 @@
 
 exports[`<Header /> renders the basic <Header /> with a background 1`] = `
 <div
-  class="header__Background-djltcn-0 lglpeb"
+  class="header__Background-djltcn-0 hSqUVA"
   data-testid="header-bg"
 >
   <div
-    class="header__Container-djltcn-1 cKeoqP"
+    class="header__Container-djltcn-1 gWMypV"
   >
     <p
       class="header__Link-djltcn-2 dHwxJN"
@@ -19,7 +19,7 @@ exports[`<Header /> renders the basic <Header /> with a background 1`] = `
 
 exports[`<Header /> renders the basic <Header /> without a background 1`] = `
 <div
-  class="header__Container-djltcn-1 cKeoqP"
+  class="header__Container-djltcn-1 gWMypV"
 >
   <p
     class="header__Link-djltcn-2 fplXiN"
@@ -31,12 +31,12 @@ exports[`<Header /> renders the basic <Header /> without a background 1`] = `
 
 exports[`<Header /> renders the full <Header> with a background 1`] = `
 <div
-  class="header__Background-djltcn-0 dUzWEZ"
+  class="header__Background-djltcn-0 ejynDy"
   data-testid="header-bg"
   src="joker1"
 >
   <div
-    class="header__Container-djltcn-1 cKeoqP"
+    class="header__Container-djltcn-1 gWMypV"
   >
     <div
       class="header__Group-djltcn-3 hAmgWk"
@@ -59,7 +59,7 @@ exports[`<Header /> renders the full <Header> with a background 1`] = `
         class="header__Search-djltcn-5 kEDhSA"
       >
         <button
-          class="header__SearchIcon-djltcn-6 ivOsNR"
+          class="header__SearchIcon-djltcn-6 fZVBWV"
           data-testid="search-click"
         >
           <img
@@ -68,7 +68,7 @@ exports[`<Header /> renders the full <Header> with a background 1`] = `
           />
         </button>
         <input
-          class="header__SearchInput-djltcn-4 bfhCLK"
+          class="header__SearchInput-djltcn-4 bPqNLb"
           data-testid="search-input"
           placeholder="Search films and series"
           value="Joker"
@@ -82,7 +82,7 @@ exports[`<Header /> renders the full <Header> with a background 1`] = `
           src="/images/users//images/karl.png.png"
         />
         <div
-          class="header__Dropdown-djltcn-9 fxiggt"
+          class="header__Dropdown-djltcn-9 hSQScP"
         >
           <div
             class="header__Group-djltcn-3 hAmgWk"
@@ -111,7 +111,7 @@ exports[`<Header /> renders the full <Header> with a background 1`] = `
     </div>
   </div>
   <div
-    class="header__Container-djltcn-1 header__Feature-djltcn-11 cKeoqP flTBnt"
+    class="header__Container-djltcn-1 header__Feature-djltcn-11 gWMypV flTBnt"
   >
     <h2
       class="header__FeatureCallOut-djltcn-12 UDRwT"

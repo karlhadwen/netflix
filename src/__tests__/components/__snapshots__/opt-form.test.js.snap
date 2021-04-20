@@ -9,7 +9,7 @@ exports[`<OptForm /> renders the <OptForm /> with populated data 1`] = `
     placeholder="Email address"
   />
   <button
-    class="opt-form__Button-sc-8oudnm-3 eIIQpf"
+    class="opt-form__Button-sc-8oudnm-3 jRSOnx"
   >
     Try it now
      

@@ -2,7 +2,7 @@
 
 exports[`<Form /> renders the <Form /> with an error 1`] = `
 <div
-  class="form__Container-sc-7952rh-0 eRNium"
+  class="form__Container-sc-7952rh-0 eJpDQz"
 >
   <div
     class="form__Error-sc-7952rh-1 iqRrPx"
@@ -20,7 +20,7 @@ exports[`<Form /> renders the <Form /> with an error 1`] = `
 
 exports[`<Form /> renders the <Form /> with populated data 1`] = `
 <div
-  class="form__Container-sc-7952rh-0 eRNium"
+  class="form__Container-sc-7952rh-0 eJpDQz"
 >
   <h1
     class="form__Title-sc-7952rh-3 jAOBPc"

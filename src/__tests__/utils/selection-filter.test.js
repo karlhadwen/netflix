@@ -3,18 +3,12 @@ import { selectionFilter } from '../../utils';
 test('selectionFilter with legitimate data', () => {
   const series = [
     {
-      title: 'Documentaries',
-      data: [
-        {
-          id: 'series-1x',
-          title: 'Tiger King',
-          description:
-            'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
-          genre: 'documentaries',
-          maturity: '18',
-          slug: 'tiger-king',
-        },
-      ],
+       id: 'series-1x',
+       title: 'Tiger King',
+       description: 'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
+       genre: 'documentaries',
+       maturity: '18',
+       slug: 'tiger-king',
     },
   ];
   const films = [
@@ -29,7 +23,7 @@ test('selectionFilter with legitimate data', () => {
   ];
 
   const slides = selectionFilter({ series, films });
-  expect(slides.films[0].title).toBe('Drama');
+  expect(slides.films[0].title).toBe('drama');
   expect(slides.films[0].data[0].description).toBe('Great film...');
   expect(slides.films[0].data[0].genre).toBe('drama');
   expect(slides.films[0].data[0].maturity).toBe('15');
@@ -38,8 +32,6 @@ test('selectionFilter with legitimate data', () => {
 
 test('selectionFilter with no data', () => {
   const slides = selectionFilter();
-  expect(slides.series[0].title).toBe('Documentaries');
-  expect(slides.films[0].title).toBe('Drama');
-  expect(slides.series[0].data).toBe(undefined);
-  expect(slides.films[0].data).toBe(undefined);
+  expect(slides.series).toStrictEqual([]);
+  expect(slides.films).toStrictEqual([]);
 });

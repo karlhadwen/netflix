@@ -2,13 +2,13 @@
 
 exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
 <div
-  class="card__Group-s87lnr-2 iYJwJU"
+  class="card__Group-s87lnr-2 hJFXLB"
 >
   <div
-    class="card__Container-s87lnr-1 gHwFSP"
+    class="card__Container-s87lnr-1 bPrLJy"
   >
     <p
-      class="card__Title-s87lnr-0 kUjNdn"
+      class="card__Title-s87lnr-0 WDoTm"
     >
       Documentaries
     </p>
@@ -41,10 +41,10 @@ exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
     </div>
   </div>
   <div
-    class="card__Container-s87lnr-1 gHwFSP"
+    class="card__Container-s87lnr-1 bPrLJy"
   >
     <p
-      class="card__Title-s87lnr-0 kUjNdn"
+      class="card__Title-s87lnr-0 WDoTm"
     >
       Feel Good
     </p>
@@ -81,13 +81,13 @@ exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
 
 exports[`<Card /> renders the <Card /> with populated data 1`] = `
 <div
-  class="card__Group-s87lnr-2 iYJwJU"
+  class="card__Group-s87lnr-2 hJFXLB"
 >
   <div
-    class="card__Container-s87lnr-1 gHwFSP"
+    class="card__Container-s87lnr-1 bPrLJy"
   >
     <p
-      class="card__Title-s87lnr-0 kUjNdn"
+      class="card__Title-s87lnr-0 WDoTm"
     >
       Documentaries
     </p>
@@ -119,10 +119,10 @@ exports[`<Card /> renders the <Card /> with populated data 1`] = `
     </div>
   </div>
   <div
-    class="card__Container-s87lnr-1 gHwFSP"
+    class="card__Container-s87lnr-1 bPrLJy"
   >
     <p
-      class="card__Title-s87lnr-0 kUjNdn"
+      class="card__Title-s87lnr-0 WDoTm"
     >
       Feel Good
     </p>
