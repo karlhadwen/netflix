@@ -8,7 +8,7 @@ import * as ROUTES from '../constants/routes';
 
 export default function SignIn() {
   const history = useHistory();
-  const { firebase } = useContext(FirebaseContext);
+  const firebase = useContext(FirebaseContext);
 
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
