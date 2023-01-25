@@ -1,0 +1,1 @@
+You can use the files in this folder as a guide on how to build the project using React V6 and Firebase Modular SDK

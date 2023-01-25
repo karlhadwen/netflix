@@ -3,7 +3,7 @@
 import { getFirestore} from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { initializeApp } from "firebase/app";
-// import {seedDatabase} from '../seed';
+// import { seedDatabase } from '../seed';
 // Only run this once to seed the Firestore
 
 // config with keys etc
