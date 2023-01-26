@@ -17,6 +17,7 @@ export default function Signup(){
 
     const isInvalid = firstName === '' || password === '' || emailAddress === '';
 
+    //Changes with Firebase V9.0
     const handleSignup = (event) =>{
 
         event.preventDefault();
@@ -34,7 +35,7 @@ export default function Signup(){
         }
         )
           .then(() => {
-            navigate(ROUTES.BROWSE);
+            navigate(ROUTES.BROWSE); // useHistory is replaced by useNavigate in React V6
           })
       
         .catch((error) => {

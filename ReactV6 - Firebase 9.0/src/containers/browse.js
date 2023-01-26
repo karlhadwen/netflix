@@ -16,9 +16,10 @@ export function BrowserContainer({slides}){
     const [loading, setLoading] = useState(true);
     const [slideRows, setSlideRows] = useState([]);
 
+    /// Changes based on Firebase V9.0
     const auth=getAuth();
     const user = auth.currentUser || {};
-
+    ///////////////////////////////////////
     useEffect(() => {
         
         setTimeout(() =>{

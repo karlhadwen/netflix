@@ -4,7 +4,7 @@ import {Home, Browse, Signin, Signup} from './pages';
 import { ProtectedRoute, UserRedirect } from './helpers/routes';
 
 export default function App() {
-/// Updating Paths to V6 
+/// Updated Paths to using React V6
 
 return (
     <> 

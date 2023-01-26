@@ -16,14 +16,14 @@ export default function Signin(){
 
     const isInvalid = password === '' || emailAddress === '';
 
+//// Changes with Firebase 9.0
     const handleSignin = (event) => {
         event.preventDefault();
         
-        return (
-            
+        return (     
           signInWithEmailAndPassword(auth, emailAddress, password)
           .then(() => {
-          navigate(ROUTES.BROWSE);
+          navigate(ROUTES.BROWSE); // useHistory is replaced by useNavigate in React V6
           })
           .catch((error) => {
             setEmailAddress('');
