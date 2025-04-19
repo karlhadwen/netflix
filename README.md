@@ -7,3 +7,4 @@ I used compound components (just a design pattern) to build my components, and t
 Subscribe to my YouTube channel here: http://bit.ly/CognitiveSurge where I build projects like this! And don't forget, you can contribute to this project (highly encouraged!).
 
 ![Preview](netflix-preview.png?raw=true)
+gcgvjvk
