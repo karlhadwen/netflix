@@ -4,6 +4,6 @@ This application (a Netflix clone) was built using React (Custom Hooks, Context)
 
 I used compound components (just a design pattern) to build my components, and there's over 10 examples as to how these are used. The styling is all handled via styled components. Using compound components made my actual dumb components really easy to test.
 
-Subscribe to my YouTube channel here: http://bit.ly/CognitiveSurge where I build projects like this! And don't forget, you can contribute to this project (highly encouraged!).
+Don't forget, you can contribute to this project (highly encouraged!).
 
 ![Preview](netflix-preview.png?raw=true)
